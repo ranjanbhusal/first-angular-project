@@ -1,0 +1,23 @@
+ng serve  --> will run the web server //normally on localhost port no 4200
+
+npm install --save bootstrap@3 --> install bootstrap into the project locally
+
+go to node_modules folder and find bootstrap dependency injection and give the address of its in angular.json file in the style parameter.
+
+ng generate component servers // n g c servers // create a new component 
+
+about the template of the component: template can be used to write html code inside ts wherese templateURL can be used to give external link 
+of html file.
+
+property binding and string interpolation // both of them have the same functionality..
+<p>{{addNewServer}}</p> 
+<p [innerText] = 'addNewServer'></p> 
+
+input also have a event called input
+<input type = 'text' class = 'form-control' (input) = 'inputOnScreen($event)'>
+event can carry all the data related with this input event
+this is like the alternative way to use the double binding but the event parameter in the ts function should use:
+event.target.value   ==>> (<HTMLInputElement>event.target).value;
+
+<app-server *ngFor = "let server of servers; let i = index"></app-server>  //servers is binded from component class and index is the reserved word for each iteration.
+

@@ -1,13 +1,14 @@
-<div class = 'container'>
     <div class = 'row'>
-        <div class = 'col-md-10'>
+        <div class = 'col-md-12'>
             <app-shopping-edit></app-shopping-edit>
+            <hr>
+            <ul class="list-group">
+                <a 
+                class="list-group-item" 
+                style = "cursor: pointer"
+                *ngFor = "let ingredient of ingredients">
+                {{ingredient.name}}({{ingredient.amount}})
+            </a>
+            </ul>
         </div>
-        <hr>
-        <div class ='col-md-10'>
-          The List of shopping list is:
-          
-        </div>
-
     </div>
-</div>

@@ -7,7 +7,11 @@ import { Recipe } from '../recipe.model'
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe('A test recipe', 'test desc', 'https://media3.s-nbcnews.com/j/MSNBC/Components/Video/201808/tdy_food_klg_chicken_180828_1920x1080.1024;768;7;70;3.jpg'),
+    new Recipe('A test recipe', 'test desc', 'https://media3.s-nbcnews.com/j/MSNBC/Components/Video/201808/tdy_food_klg_chicken_180828_1920x1080.1024;768;7;70;3.jpg')
+  ];
+  
   constructor() { }
 
   ngOnInit() {
